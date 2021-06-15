@@ -1,26 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Myform } from './MyForm';
+import { Card, CardContent, Container, Typography } from '@material-ui/core';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      
+         <Container fixed>
+            <Card>
+                <CardContent>
+
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Connexion
+                    </Typography>
+
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Connectez-vous avec l'utilisateur admin et le mot de passe admin.
+                    </Typography>
+
+                 </CardContent> 
+          <Myform onSubmit={() => {}}/>
+
+        </Card>
+        </Container>
   );
-}
+};
 
 export default App;
